@@ -13,7 +13,7 @@ Install Docker: If you haven't already, install Docker on your machine.
 Run Docker Container:
     docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=your_pass" -e "MSSQL_PID=Evaluation" -p 1433:1433 --name CSA103 --hostname CSA103 -d mcr.microsoft.com/mssql/server:2022-preview-ubuntu-22.04
 
-Deploying Adventure2022 Database
+Deploying Adventure2022 Database:
 Ensure you have the adventure2022.bak file ready.
 Open MySQL server, connect to localhost .,1433
 login - sa
@@ -35,6 +35,7 @@ Database: Adventure2022
 Follow the prompts to import data from the desired tables. (Dont take first views, scroll down to second HumanResources)
 
 Write SQL queries using functions like VLOOKUP to create tables with sorted Employees and find out their Departments.
+
 You will certainly need those functions:
 =IF(ISNUMBER(MATCH([@BusinessEntityID], Employee_TABLE_2[BusinessEntityID], 0)), "Employee", "Non-Employee")
 
